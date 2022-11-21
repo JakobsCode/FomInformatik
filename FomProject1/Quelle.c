@@ -3,5 +3,5 @@
 int main()
 {
 	//Falsche Ausgabe
-	printf("φόδί");
+	printf("φόδί@'#<>|€");
 };
