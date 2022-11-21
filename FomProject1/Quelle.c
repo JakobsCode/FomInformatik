@@ -1,6 +1,7 @@
-#include <stdio.h>
 // 21.11.2022
+#include <stdio.h>
 int main()
 {
-	printf("öüäßßßßßßßßßßßßßßßßßßßßßßßß");
+	//Falsche Ausgabe
+	printf("öüäß");
 };
