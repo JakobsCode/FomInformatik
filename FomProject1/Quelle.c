@@ -1,11 +1,15 @@
 // 22.11.2022
-// Zweidimensionales Array
 #include <stdio.h>
 
-int main()
+void main()
 {
-	char wort[4] = "abc";
-	// Wort = {'a','b','c','\0'}
-	wort[0] = 'z';
-	// Wort = {'z','b','c','\0'}	
+	typedef struct 
+	{
+		char name[40];
+		unsigned int matrikel;
+		int proseminar;
+	} UnserDatenTyp;
+
+	UnserDatenTyp U;
+
 }
