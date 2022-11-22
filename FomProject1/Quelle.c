@@ -4,6 +4,8 @@
 
 int main()
 {
-	float tag[7][3];
-	//Wird Spaltenweise ausgelesen, dann auch schneller
+	char wort[4] = "abc";
+	// Wort = {'a','b','c','\0'}
+	wort[0] = 'z';
+	// Wort = {'z','b','c','\0'}	
 }
