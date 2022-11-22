@@ -1,5 +1,5 @@
-// 21.11.2022
-// Arrays
+// 22.11.2022
+// Zweidimensionales Array
 #include <stdio.h>
 
 int main()
