@@ -4,4 +4,6 @@
 void main()
 {
 	UnserDatenTyp U;
+	U.matrikel = 45124;
+	U.name[0] = 'P';
 }
