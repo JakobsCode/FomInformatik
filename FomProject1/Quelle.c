@@ -4,8 +4,11 @@
 
 void main()
 {
-	UnserDatenTyp U;
-	UnserDatenTyp UA[500];
-	U.matrikel = 45124;
-	U.name[0] = 'P';
+	char c = 'a';
+
+	switch (c) {
+	case 'a': c = 'Z';
+	case 'b': c = 'y';
+	case 'c': c = 'x';
+	}
 }
