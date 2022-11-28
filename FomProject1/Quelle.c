@@ -1,4 +1,5 @@
-// 22.11.2022
+// 28.11.2022
+//https://github.com/JakobsCode/FomInformatik
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
