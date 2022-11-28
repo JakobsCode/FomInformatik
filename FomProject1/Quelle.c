@@ -7,8 +7,11 @@ void main()
 	char c = 'a';
 
 	switch (c) {
-	case 'a': c = 'Z';
-	case 'b': c = 'y';
-	case 'c': c = 'x';
+	case 'a': 
+		c = 'Z';
+	case 'b': 
+		c = 'y';
+	case 'c': 
+		c = 'x';
 	}
 }
