@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 #include "H1.h"
 //vabs
 void main()
@@ -11,6 +12,9 @@ void main()
 	int User_Data = 0; //Eingabe
 	int Zahl1 = 10;
 	int Zahl2 = 10;
+	float xn = 1;
+	float xn1 = 1;
+	float Abbruch = 1;
 
 	do
 	{
@@ -80,7 +84,13 @@ void main()
 			}
 			break;
 		case 8:
-
+			xn1 = 1;
+			do
+			{
+				xn = xn1;
+				xn1 = (xn + Zahl1 / xn) / 2;
+				Abbruch = fabs(xn1 - xn);
+			} while (fabs(xn1 - xn)<0.001);
 			break;
 		case 9:
 			printf("Bis zum naechsten mal!");
