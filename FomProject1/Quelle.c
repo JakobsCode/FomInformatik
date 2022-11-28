@@ -9,9 +9,12 @@ void main()
 	switch (c) {
 	case 'a': 
 		c = 'Z';
+		break;
 	case 'b': 
 		c = 'y';
+		break;
 	case 'c': 
 		c = 'x';
+		break;
 	}
 }
