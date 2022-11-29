@@ -10,8 +10,8 @@ void main()
 {
 	int keep_running = 1; // =true
 	int User_Data = 0; //Eingabe
-	int Zahl1 = 10;
-	int Zahl2 = 10;
+	int Zahl1 = 9;
+	int Zahl2 = 1;
 	float xn = 1;
 	float xn1 = 1;
 	float Abbruch = 1;
@@ -89,8 +89,8 @@ void main()
 			{
 				xn = xn1;
 				xn1 = (xn + Zahl1 / xn) / 2;
-				Abbruch = fabs(xn1 - xn);
-			} while (fabs(xn1 - xn)<0.001);
+			} while (fabs(xn1 - xn)>0.001);
+			printf("Die Wurzel ist: %f\n", xn1);
 			break;
 		case 9:
 			printf("Bis zum naechsten mal!");
