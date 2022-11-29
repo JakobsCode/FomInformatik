@@ -2,7 +2,6 @@
 //https://github.com/JakobsCode/FomInformatik
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <math.h>
 #include "H1.h"
 //vabs
@@ -14,7 +13,6 @@ void main()
 	int Zahl2 = 1;
 	float xn = 1;
 	float xn1 = 1;
-	float Abbruch = 1;
 
 	do
 	{
