@@ -23,5 +23,7 @@ int main() {
 	printJQ(&jobQueue_1);
 	printJQ(&jobQueue_2);
 
+	printf("%d",jobQueue_1.count);
+
 	return 0;
 }
