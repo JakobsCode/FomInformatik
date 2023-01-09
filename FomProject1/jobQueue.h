@@ -8,7 +8,7 @@ typedef struct Job {
 	char desc[MAX_LENGTH];
 } Job_t;
 
-typedef struct QueueEl {
+typedef struct QueueEl { // El = Element 
 	Job_t Job;
 	struct QueueEl* next;
 } QueueEl_t;
@@ -18,7 +18,7 @@ typedef struct JobQueue {
 	QueueEl_t* first, *last;
 } JobQueue_t;
 
-int pushJQ(JobQueue_t* pJQ, const Job_t* pJob);
+int pushJQ(JobQueue_t* pJQ, Job_t* pJob);
 Job_t popJQ(JobQueue_t* pJQ);
 void printJQ(JobQueue_t* pJQ);
 
