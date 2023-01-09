@@ -1,7 +1,7 @@
 #ifndef JOBQUEUE_H
 
 #define JOBQUEUE_H
-#define MAX_LENGTH 10
+#define MAX_LENGTH 100
 
 typedef struct Job {
 	int prio;
