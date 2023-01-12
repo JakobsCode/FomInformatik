@@ -6,15 +6,17 @@
 int NUM;
 int a[MAX_N];
 int b[MAX_N];
+int *pA = a;
+int *pB = b;
 
 void Einlesen() {
 	printf("Wie viele Zahlen willst du einlesen? (Max: %d)\n", MAX_N);
 	scanf_s("%d", &NUM);
 	for (int i = 0; i < NUM; i++) {
 		printf("Bitte die Zahl fuer a[%d] eingeben\n", i);
-		scanf_s("%d", &a[i]);
+		scanf_s("%d", pA + i);
 		printf("Bitte die Zahl fuer b[%d] eingeben\n", i);
-		scanf_s("%d", &b[i]);
+		scanf_s("%d", pB + i);
 	}
 	printf("Alle Zahlen wurden eingelesen.\n");
 }
