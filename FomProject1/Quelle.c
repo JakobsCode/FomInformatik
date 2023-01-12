@@ -1,36 +1,15 @@
 // 12.01.2023
 //https://github.com/JakobsCode/FomInformatik
 #include <stdio.h>
-#define MAX_N 10
-
-int NUM;
-int a[MAX_N];
-int b[MAX_N];
-int *pA = a;
-int *pB = b;
-
-void Einlesen() {
-	printf("Wie viele Zahlen willst du einlesen? (Max: %d)\n", MAX_N);
-	scanf_s("%d", &NUM);
-	for (int i = 0; i < NUM; i++) {
-		printf("Bitte die Zahl fuer a[%d] eingeben\n", i);
-		scanf_s("%d", pA + i);
-		printf("Bitte die Zahl fuer b[%d] eingeben\n", i);
-		scanf_s("%d", pB + i);
-	}
-	printf("Alle Zahlen wurden eingelesen.\n");
-}
-
-int Skalarprodukt() {
-	int Returnvalue = 0;
-	for (int j = 0; j < NUM; j++) {
-		Returnvalue += a[j] * b[j];
-	}
-		return Returnvalue;
-}
 
 void main()
 {
-	Einlesen();
-	printf("Das Skalaprodukt ist %d\n", Skalarprodukt());
+	int a = 5;
+	printf("a: %d\n", a);
+	int b = a++;
+	printf("b: %d\n", b);
+	printf("-> a: %d\n", a);
+	int c = ++a;
+	printf("c: %d\n", c);
+	printf("--->a: %d\n", a);
 }
