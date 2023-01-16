@@ -8,7 +8,7 @@ typedef struct Job {
 	char desc[MAX_LENGTH];
 } Job_t;
 
-typedef struct QueueEl { // El = Element 
+typedef struct QueueEl {
 	Job_t Job;
 	struct QueueEl* next;
 } QueueEl_t;

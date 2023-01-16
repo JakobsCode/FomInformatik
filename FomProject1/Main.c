@@ -2,7 +2,7 @@
 #include "jobQueue.h"
 
 int main() {
-	printf("ben");
+	printf("start\n");
 	JobQueue_t jobQueue_1 = { 0 };
 	Job_t	Job_1 = { 1, "Job_1" },
 		Job_2 = { 2, "Job_2" },
