@@ -1,25 +1,22 @@
 #include <stdio.h>
 #include <math.h>
 
-void heron(double x, double* result) {
-    // Anfangswert für die Iteration festlegen
-    double last = x;
-    double next = (last + x / last) / 2.0;
-
-    // Iteration solange fortsetzen, bis sich der Wert kaum noch verändert
-    while (fabs(last - next) > 1e-9) {
-        last = next;
-        next = (last + x / last) / 2.0;
-    }
-
-    // Ergebnis zurückgeben
-    *result = next;
+double ab(double d) { return d < 0 ? -d : d; }
+int quadratwurzel(double yn, double x);
+int quadratwurzel(double yn, double x) {
+	double b = x;
+	double ans;
+	x = (b + (yn / b)) / 2;
+	if (ab(b - x) <= 0.0000001) {
+		ans = x;
+	}
+	else {
+		ans = quadratwurzel(yn, x);
+	}
+	return ans;
 }
 
-int main(void) {
-    double x = 9.0;
-    double result;
-    heron(x, &result);
-    printf("Die Quadratwurzel von %f ist %f\n", x, result);
-    return 0;
+int main() {
+	printf("%d", quadratwurzel(81, 1));
+	return 0;
 }
