@@ -1,39 +1,41 @@
 #include <stdio.h>
-#include <stdlib.h>
-int main() {
-	int a = 10;		// Res. Adr. für 1x INT		| Schreiben "10" in Adr.			| ADRESSE ALS INT INTERP.
-	int p = &a;		// Res. Adr. für 1x POINTER | Schreibe [ADRESSE VON A] in Adr.	| ADRESSE ALS POINTER INTERP.
-	int** pp = &p;	// Res. Adr. für 1x POINTER | Schreibe [ADRESSE VON P] in Adr.	| ADRESSE ALS DOPPEL POINTER INTERP.
+#define rows 10
+#define cols 10
 
-	printf("a\t= %d\n", a);
-	printf("*p\t= %d\n", *(int*)p);
-	printf("**pp\t= %d\n", **pp);
-	printf("\n");
-	printf("&a\t= %p\n", &a);
-	printf("*pp\t= %p\n", *pp);
-	printf("p\t= %p\n", (int*)p);
-	printf("\n");
-	printf("&p\t= %p\n", &(int*)p);
-	printf("pp\t= %p\n", pp);
-	printf("\n");
-	printf("&pp\t= %p\n", &pp);
-	return 0;
+void createMatrix(int matrix[rows][cols])
+{
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			if ((i % 2 != 0) && (j % 2 != 0))
+			{
+				matrix[i][j] = (-1) * i * j;
+			}
+			else
+			{
+				matrix[i][j] = i * j;
+			}
+		}
+	}
 }
 
 
-/*
-Console Out:
-a       = 10
-*p      = 10
-**pp    = 10
+int main()
+{
+	int myMatrix[rows][cols]; // <---DOPPELPOINTER | array[][] == **array 
+	createMatrix(myMatrix);
+	int negCount = 0;
+	for (int i = 0; i < (rows * cols); i++)
+	{
+		printf("%d\n", *(	(int*)myMatrix	 +	i));
+	  //printf("%d\n", *(	myMatrix		 +  i)); <-- Falsch
 
-&a      = 0097FCA4
-*pp     = 0097FCA4
-p       = 0097FCA4
-
-&p      = 0097FC98
-pp      = 0097FC98
-
-&pp     = 0097FC8C
-
-*/
+		if (*(((int*)myMatrix) + i) < 0)
+		{
+			negCount++;
+		}
+	}
+	printf("negCount = %d\n", negCount);
+	return 0;
+}
